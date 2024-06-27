@@ -56,8 +56,7 @@ def login():
         )
         database.session.add(user)
         database.session.commit()
-        flash(f"Cadastro feito com sucesso: {
-              form_createacount.email.data}", 'alert-success')
+        flash(f"Cadastro feito com sucesso: {form_createacount.email.data}", 'alert-success')
         return redirect(url_for('home'))
 
     return render_template('login.html', form_login=form_login, form_createacount=form_createacount)
