@@ -1,0 +1,140 @@
+/* Estilo base para os elementos */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para .card_my */
+.card_my {
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: auto;
+  padding: 1rem; /* Ajustado para rem */
+}
+
+/* Estilo para .stats, .articles, .followers, .rating, .number1, .number2, .number3 */
+.stats {
+  background: #f2f5f8 !important;
+  color: #000 !important;
+}
+
+.articles, .followers, .rating {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.number1, .number2, .number3 {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+/* Estilo para .mypost */
+.mypost {
+  background: #f2f5f8 !important;
+}
+
+/* Estilo para .image-container, .image, .button-container */
+.image-container {
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+/* Media queries para dispositivos de tela grande modificados para usar rem */
+@media (max-width: 768px) {
+  .card_my {
+    padding: 0.9375rem;  /* 15px convertido para rem */
+  }
+  
+  .articles, .followers, .rating {
+    font-size: 0.875rem; /* 14px convertido para rem */
+  }
+  
+  .number1, .number2, .number3 {
+    font-size: 1rem; /* 16px convertido para rem */
+  }
+}
+
+/* Media queries para dispositivos de tela muito pequena */
+@media (max-width: 480px) {
+  .card_my {
+    padding: 0.625rem; /* 10px convertido para rem */
+  }
+  
+  .articles, .followers, .rating {
+    font-size: 0.75rem; /* 12px convertido para rem */
+  }
+  
+  .number1, .number2, .number3 {
+    font-size: 0.875rem; /* 14px convertido para rem */
+  }
+
+  .image img {
+    max-width: 90%;
+  }
+
+  /* Garantindo que todos os elementos fiquem em uma única coluna em telas pequenas */
+  .row {
+    display: flex;
+    flex-direction: column-reverse
+  }
+}
+
+/* Media queries para esconder a imagem e os botões em dispositivos móveis */
+@media (max-width: 346px) { /* Ponto de quebra para dispositivos móveis */
+  .image-container {
+    display: none; /* Esconde o container da imagem */
+  }
+
+  .button-container {
+    display: none; /* Esconde o container dos botões */
+  }
+}
+
+/* Estilo para a página 404 */
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.page-404 h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-404 p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-404 a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.page-404 a:hover {
+  background-color: #0056b3;
+}

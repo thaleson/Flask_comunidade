@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-3">
+    <h1 style="color:orange;">Comunidade GramHub - Feito por <a style="text-decoration: none;"
+            href="https://www.linkedin.com/in/thaleson-silva-9298a0296/">Thaleson silva</a></h1>
+    <h2>Um só lugar para você estudar.</h2>
+    <hr>
+    {% for post in posts%}
+    <div class="row border mt-5 p-3  mypost">
+        <div class="col col-2">
+            <div class="image pe-5">
+                <img src="{{  url_for( 'static', filename='photos_profile/{}'.format( post.autor.profile_picture  )) }}"
+                    class="rounded" width="200">
+
+                <strong class="p-1"> {{post.autor.username}}</strong>
+
+                <div class="button-container">
+
+
+                    {% for course in post.autor.courses.split(';')%}
+                    <button type="button" class="btn btn-success  mt-2" disabled> {{ course}}</button>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col col-9">
+            <a style="text-decoration: none;" href="{{ url_for('display_post',post_id=post.id)}}">
+                <h3>{{post.title }}</h3>
+            </a>
+            <p>{{ post.body }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock body %}
