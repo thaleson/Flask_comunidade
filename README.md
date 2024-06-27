@@ -78,4 +78,13 @@
    ```sh
    python main.py
    ```
-   
+
+
+### Vídeo
+Para uma visão mais detalhada, assista ao vídeo de demonstração:
+
+<p align="center">
+  <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7212155396642267136/" target="_blank">
+    Assista ao vídeo
+  </a>
+</p>
