@@ -63,7 +63,7 @@
 **Como Executar:**
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seuusuario/seurepositorio.git
+   git clone https://github.com/thaleson/Flask_comunidade
    ```
 2. Crie e ative o ambiente virtual:
    ```sh
